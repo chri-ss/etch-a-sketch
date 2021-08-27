@@ -1,0 +1,23 @@
+body {
+    display: grid;
+}
+
+h1 {
+    display: grid;
+    justify-content: center;
+}
+
+#container {
+    height: 95;
+    margin: 2rem;
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+}
+
+div {
+    border:  1px solid black;
+    padding: 2rem;
+}
+
+
