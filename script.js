@@ -1,4 +1,6 @@
-function createGrid () {
+
+
+function createGrid() {
     let container = document.querySelector('#container');
 
     for(i = 0; i < 256; ++i)
@@ -21,13 +23,13 @@ function addColor() {
     {
         realDivs[i].addEventListener('mouseover', function() {
             realDivs[i].style.backgroundColor = 'black';
-        })
+            })
     }
 
     const container = document.querySelector('#container');
 
     container.addEventListener('mouseover', function() {
-        container.style.backgroundColor = 'white';
+        container.style.backgroundColor = 'aquamarine';
     })
 }
 

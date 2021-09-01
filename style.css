@@ -1,23 +1,38 @@
+
 body {
-    display: grid;
+    background-color: skyblue;
 }
 
 h1 {
-    display: grid;
-    justify-content: center;
+    text-align: center;
+    margin: 1rem;
 }
 
 #container {
-    height: 95;
-    margin: 2rem;
+    background-color: aquamarine;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: grid;
-    grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: repeat(16, 1fr);
+    width: 50%;
+    height: 50%;
+    grid-template-rows: repeat(16, 2vw);
+    grid-template-columns: repeat(16, 2vw);
+    justify-content: center;
 }
 
 div {
+    background-color: white;
     border:  1px solid black;
-    padding: 2rem;
+}
+
+.div {
+    padding-top: 75%;
+    z-index: 100;
+}
+
+.color {
+    background: rgb(255, 60, 70);
 }
 
 
