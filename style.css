@@ -13,8 +13,8 @@ h1 {
     display: grid;
     width: 500px;
     height: 500px;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
 }
 
 div {
@@ -23,6 +23,7 @@ div {
 }
 
 .div {
+    padding-top: 75%;
     z-index: 100;
 }
 

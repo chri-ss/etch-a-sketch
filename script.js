@@ -1,15 +1,21 @@
-let input = 16;
+let input = 20;
 
 let container = document.querySelector('#container');
 
-let resize = document.querySelector('.resize');
+let resize = document.querySelector('.rszbtn');
 resize.addEventListener('click', resizeGrid);
 
 function resizeGrid() {
-    input = prompt("enter a new size for the grid.");
 
-    container.cssText = `grid-template-columns: repeat(${ parseInt(input) }, 
-                        1fr);grid-template-rows: repeat(${ parseInt(input) }, 1fr);`
+    for (i = 0; i < input ** 2; ++i)
+    {
+        container.removeChild(container.lastChild);
+    }
+
+    input = prompt('Enter a new size for the grid.');
+
+    container.style.gridTemplateColumns = `repeat(${ input }, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${ input }, 1fr)`;
 
     for(i = 0; i < input ** 2; ++i)
     {
@@ -17,6 +23,7 @@ function resizeGrid() {
         container.lastChild.classList.add('.div');
     }
 
+        addColor();
 }
 
 function createGrid() {
@@ -31,7 +38,7 @@ function createGrid() {
 
 function addColor() {
 
-    let divs = document.querySelectorAll('div');
+    const divs = document.querySelectorAll('div');
 
     let realDivs = Array.from(divs);
 
