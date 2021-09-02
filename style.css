@@ -9,16 +9,12 @@ h1 {
 }
 
 #container {
-    background-color: aquamarine;
     margin: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     display: grid;
-    width: 50%;
-    height: 50%;
-    grid-template-rows: repeat(16, 2vw);
-    grid-template-columns: repeat(16, 2vw);
-    justify-content: center;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
 }
 
 div {
@@ -27,12 +23,17 @@ div {
 }
 
 .div {
-    padding-top: 75%;
     z-index: 100;
 }
 
 .color {
     background: rgb(255, 60, 70);
+}
+
+.resize {
+    text-align: center;
+    background-color: skyblue !important;
+    border: none;
 }
 
 

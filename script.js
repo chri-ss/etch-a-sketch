@@ -1,9 +1,27 @@
+let input = 16;
 
+let container = document.querySelector('#container');
+
+let resize = document.querySelector('.resize');
+resize.addEventListener('click', resizeGrid);
+
+function resizeGrid() {
+    input = prompt("enter a new size for the grid.");
+
+    container.cssText = `grid-template-columns: repeat(${ parseInt(input) }, 
+                        1fr);grid-template-rows: repeat(${ parseInt(input) }, 1fr);`
+
+    for(i = 0; i < input ** 2; ++i)
+    {
+        container.appendChild(document.createElement('div'));
+        container.lastChild.classList.add('.div');
+    }
+
+}
 
 function createGrid() {
-    let container = document.querySelector('#container');
 
-    for(i = 0; i < 256; ++i)
+    for(i = 0; i < input ** 2; ++i)
     {
         container.appendChild(document.createElement('div'));
         container.lastChild.classList.add('.div');
@@ -13,7 +31,7 @@ function createGrid() {
 
 function addColor() {
 
-    const divs = document.querySelectorAll('div');
+    let divs = document.querySelectorAll('div');
 
     let realDivs = Array.from(divs);
 
