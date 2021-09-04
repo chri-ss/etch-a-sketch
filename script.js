@@ -2,8 +2,23 @@ let input = 20;
 
 let container = document.querySelector('#container');
 
+let colorFlag = false;
+
 let resize = document.querySelector('.rszbtn');
 resize.addEventListener('click', resizeGrid);
+
+let colorButton = document.querySelector('.clrbtn');
+colorButton.addEventListener('change', (e) => {
+    if (e.currentTarget.checked)
+    {
+        colorFlag = true;
+    }
+    else
+    {
+        colorFlag = false;
+    }
+    addColor();
+})
 
 function resizeGrid() {
 
@@ -44,18 +59,36 @@ function addColor() {
 
     console.log(realDivs);
 
-    for (let i = 0; i < realDivs.length; ++i)
+    if (colorFlag === false)
     {
-        realDivs[i].addEventListener('mouseover', function() {
-            realDivs[i].style.backgroundColor = 'black';
-            })
-    }
+        for (let i = 0; i < realDivs.length; ++i)
+        {
+            realDivs[i].addEventListener('mouseover', function() {
+                realDivs[i].style.backgroundColor = 'black';
+                })
+        }
 
-    const container = document.querySelector('#container');
+        const container = document.querySelector('#container');
 
-    container.addEventListener('mouseover', function() {
+        container.addEventListener('mouseover', function() {
         container.style.backgroundColor = 'aquamarine';
-    })
+        })
+    }
+    else
+    {
+        for (let i = 0; i < realDivs.length; ++i)
+        {
+            realDivs[i].addEventListener('mouseover', function() {
+                realDivs[i].style.backgroundColor = `rgb(${ Math.floor(Math.random() * 256) }, ${ Math.floor(Math.random() * 256) }, ${ Math.floor(Math.random() * 256) })`;
+                })
+        }
+
+        const container = document.querySelector('#container');
+
+        container.addEventListener('mouseover', function() {
+        container.style.backgroundColor = 'aquamarine';
+        })
+    }
 }
 
 createGrid();
