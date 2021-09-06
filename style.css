@@ -23,7 +23,8 @@ h1 {
     grid-template-rows: repeat(20, 1fr);
     border: 1rem solid darkslategray;
     border-radius: 10px;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    box-shadow: 1rem 1rem 5px teal;
 }
 
 div {
@@ -36,13 +37,9 @@ div {
     z-index: 100;
 }
 
-.color {
-    background: rgb(255, 60, 70);
-}
-
 .buttons {
     background-color: aquamarine!important;
-    border: 4px dotted blue;
+    border: 1rem solid darkslategray;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -52,6 +49,7 @@ div {
     justify-content: center;
     align-items: center;
     margin-left: 15rem;
+    box-shadow: 1rem 1rem 5px teal;
 }
 
 
@@ -60,17 +58,20 @@ div {
     width: 10rem;
     margin: 2rem;
     font-size: 24px;
+    border-radius: 10px;
 }
 
 .erase {
     width: 10rem;
     margin: 2rem;
     font-size: 24px;
+    border-radius: 10px;
 }
 
 .clrbtn {
     margin: 1rem;
     font-size: 24px;
+    
 }
 
 
