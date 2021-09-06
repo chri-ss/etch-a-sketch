@@ -20,6 +20,19 @@ colorButton.addEventListener('change', (e) => {
     addColor();
 })
 
+createGrid();
+addColor();
+
+let erase = document.querySelector('.erase')
+erase.addEventListener('click', function() { 
+    const divs = document.querySelectorAll('.div');
+    let realDivs = Array.from(divs);
+    for (let i = 0; i < realDivs.length; ++i)
+        {
+            realDivs[i].style.backgroundColor = 'white';
+        }
+})
+
 function resizeGrid() {
 
     for (i = 0; i < input ** 2; ++i)
@@ -35,7 +48,7 @@ function resizeGrid() {
     for(i = 0; i < input ** 2; ++i)
     {
         container.appendChild(document.createElement('div'));
-        container.lastChild.classList.add('.div');
+        container.lastChild.classList.add('div');
     }
 
         addColor();
@@ -46,7 +59,7 @@ function createGrid() {
     for(i = 0; i < input ** 2; ++i)
     {
         container.appendChild(document.createElement('div'));
-        container.lastChild.classList.add('.div');
+        container.lastChild.classList.add('div');
     }
 
 }
@@ -79,7 +92,8 @@ function addColor() {
         for (let i = 0; i < realDivs.length; ++i)
         {
             realDivs[i].addEventListener('mouseover', function() {
-                realDivs[i].style.backgroundColor = `rgb(${ Math.floor(Math.random() * 256) }, ${ Math.floor(Math.random() * 256) }, ${ Math.floor(Math.random() * 256) })`;
+                realDivs[i].style.backgroundColor = `rgb(${ Math.floor(Math.random() * 256) }, 
+                ${ Math.floor(Math.random() * 256) }, ${ Math.floor(Math.random() * 256) })`;
                 })
         }
 
@@ -91,5 +105,3 @@ function addColor() {
     }
 }
 
-createGrid();
-addColor();

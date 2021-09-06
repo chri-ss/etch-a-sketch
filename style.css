@@ -1,20 +1,29 @@
 
 body {
+    display: flex;
     background-color: skyblue;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 h1 {
     text-align: center;
-    margin: 1rem;
+    margin: auto;
+    padding: 2rem;
+    font-size: 24px;
 }
 
 #container {
     margin: auto;
     display: grid;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
+    border: 1rem solid darkslategray;
+    border-radius: 10px;
+    margin-top: 3rem;
 }
 
 div {
@@ -31,9 +40,37 @@ div {
     background: rgb(255, 60, 70);
 }
 
-.resize {
-    text-align: center;
-    background-color: skyblue !important;
-    border: none;
+.buttons {
+    background-color: aquamarine !important;
+    border: 4px dotted blue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15rem;
 }
+
+
+
+.rszbtn {
+    width: 10rem;
+    margin: 2rem;
+    font-size: 24px;
+}
+
+.erase {
+    width: 10rem;
+    margin: 2rem;
+    font-size: 24px;
+}
+
+.clrbtn {
+    margin: 1rem;
+    font-size: 24px;
+}
+
 
