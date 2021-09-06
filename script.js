@@ -42,16 +42,16 @@ function resizeGrid() {
 
     input = prompt('Enter a new size for the grid.');
 
-    container.style.gridTemplateColumns = `repeat(${ input }, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${ input }, 1fr)`;
-
-    for(i = 0; i < input ** 2; ++i)
+    if (input <= 0 || input > 100)
     {
-        container.appendChild(document.createElement('div'));
-        container.lastChild.classList.add('div');
+        input = prompt('Enter a new size for the grid.');
     }
 
-        addColor();
+    container.style.gridTemplateColumns = `repeat(${ input }, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${ input }, 1fr)`;
+        
+    createGrid();
+    addColor();
 }
 
 function createGrid() {
