@@ -42,7 +42,7 @@ function resizeGrid() {
 
     input = prompt('Enter a new size for the grid.');
 
-    if (input <= 0 || input > 100)
+    while (input <= 0 || input > 100 || input === null)
     {
         input = prompt('Enter a new size for the grid.');
     }
