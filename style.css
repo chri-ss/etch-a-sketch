@@ -23,7 +23,7 @@ h1 {
     grid-template-rows: repeat(20, 1fr);
     border: 1rem solid darkslategray;
     border-radius: 10px;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 div {
@@ -32,7 +32,7 @@ div {
 }
 
 .div {
-    padding-top: 75%;
+
     z-index: 100;
 }
 
@@ -41,7 +41,7 @@ div {
 }
 
 .buttons {
-    background-color: aquamarine !important;
+    background-color: aquamarine!important;
     border: 4px dotted blue;
     border-radius: 10px;
     display: flex;
