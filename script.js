@@ -40,11 +40,11 @@ function resizeGrid() {
         container.removeChild(container.lastChild);
     }
 
-    input = prompt('Enter a new size for the grid.');
+    input = prompt('Enter a new size for the grid (between 0 and 100, number will be squared).');
 
     while (input <= 0 || input > 100 || input === null)
     {
-        input = prompt('Enter a new size for the grid.');
+        input = prompt('Enter a new size for the grid (between 0 and 100, number will be squared).');
     }
 
     container.style.gridTemplateColumns = `repeat(${ input }, 1fr)`;
